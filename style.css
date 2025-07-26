@@ -1,0 +1,58 @@
+:root{
+    --gray-400 : hsl(0, 0%, 58%);
+    --gray-950 : hsl(0, 0%, 17%);
+    
+    --font-size-400 : 1.125rem;
+
+    --font-weight-400 : 400;
+    --font-weight-500 : 500;
+    --font-weight-700 : 700;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+}
+.searchBar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background-image: url("./images/pattern-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.searchBar h1{
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-500);
+    color: white;
+}
+.searchContainer{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.searchContainer input{
+    border-radius: 10px 0 0 10px;
+    border-style: none;
+   
+}
+.searchContainer input::placeholder{
+    font-size: .6rem
+}
+.searchContainer button{
+    padding: .75rem;
+    background-color: hsl(0, 0%, 0%);
+    border-radius: 0 10px 10px 0;
+    border-style: none;
+}
+
+
+#map { height: 180px; }
+#searchBar{
+    padding: .75rem .5rem;
+}

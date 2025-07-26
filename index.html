@@ -1,46 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>IP Address Tracker</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <div class="searchBar">
+      <header><h1>IP Address Tracker</h1></header>
+      <div class="searchContainer">
+        <label for="searchBar"></label
+        ><input
+          type="text"
+          name="searchBar"
+          id="searchBar"
+          placeholder=" Search for any IP address or domain"
+        />
+        <button>
+          <img src="./images/icon-arrow.svg" alt="search-arrow-icon" />
+        </button>
+      </div>
+    </div>
+    <div class="infoCard">
+      <div class="detail-section">
+        <h4>IP Address</h4>
+        <p id="ipAddress"></p>
+      </div>
 
-</head>
-<body>
-<div class="search-bar">
-  <header>IP Address Tracker</header>
-  <div class="searchContainer">
-    <label for="searchBar"></label><input type="text" name="searchBar" id="searchBar" placeholder=" Search for any IP address or domain">
-    <button><img src="./images/icon-arrow.svg" alt="search-arrow-icon"></button>
-  </div>
-</div>
-<div class="infoCard">
-  <div class="detail-section">
-    <h4>IP Address</h4>
-    <p id="ipAddress"></p>
-  </div>
+      <div class="detail-section">
+        <h4>Location</h4>
+        <p id="location"></p>
+      </div>
+      <div class="detail-section">
+        <h4>Timezone</h4>
+        <p id="timezone">UTC</p>
+      </div>
 
-  <div class="detail-section">
-    <h4>Location</h4>
-    <p id="location"></p>
-  </div>
-  <div class="detail-section">
-    <h4>Timezone</h4>
-    <p id="timezone">UTC</p>
-  </div>
-
-  <div class="detail-section">
-    <h4>ISP</h4>
-    <p id="isp"></p>
-  </div>
-
-</div>
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      <div class="detail-section">
+        <h4>ISP</h4>
+        <p id="isp"></p>
+      </div>
+    </div>
+    <div id="map"></div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
