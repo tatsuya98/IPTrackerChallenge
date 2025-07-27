@@ -16,8 +16,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 1rem;
+    height: 240px;
     padding: 1.5rem 1rem;
     background-image: url("./images/pattern-bg-mobile.png");
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ body{
 }
 
 .searchBar h1{
-    font-size: var(--font-size-400);
+    font-size: 1.5rem;
     font-weight: var(--font-weight-500);
     color: white;
 }
@@ -39,7 +39,7 @@ body{
 .searchContainer input{
     border-radius: 10px 0 0 10px;
     border-style: none;
-   
+    width: 275px;
 }
 .searchContainer input::placeholder{
     font-size: .6rem
@@ -51,8 +51,66 @@ body{
     border-style: none;
 }
 
-
-#map { height: 180px; }
+.infoCard{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    border-radius: 10px;
+    position:absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    width: 275px;
+}
+.divider{
+    display: none;
+}
+.detailSection{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.detailSection h4{
+    font-size: 10px;
+    color: var(--gray-400);
+    margin-bottom: 10px;
+    font-weight: var(--font-weight-700);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.detailSection p{
+    font-size: var(--font-size-400);
+    font-weight: var(--font-weight-500);
+}
+#map { height: 67vh; }
 #searchBar{
     padding: .75rem .5rem;
+}
+
+@media screen and (min-width: 800px){
+    .infoCard{
+        flex-direction: row;
+        justify-content: space-between;
+        width: 700px;
+        padding: 2rem;
+    }
+    .divider{
+        opacity: .25;
+        display: block;
+    }
+    .detailSection{
+        text-align: left;
+        width: 13ch;
+    }
+    .searchBar{
+        background-image: url("./images/pattern-bg-desktop.png");
+        justify-content: center;
+    }
+    .searchBar input{
+        width: 325px;
+    }
+    .searchBar input::placeholder{
+        font-size: .75rem;
+    }
 }
