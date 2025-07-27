@@ -83,7 +83,7 @@ body{
     font-size: var(--font-size-400);
     font-weight: var(--font-weight-500);
 }
-#map { height: 67vh; }
+#map { height: 70vh; }
 #searchBar{
     padding: .75rem .5rem;
 }
@@ -109,6 +109,12 @@ body{
     }
     .searchBar input{
         width: 325px;
+    }
+    .searchBar input:hover, .searchBar button:hover{
+        cursor: pointer;
+    }
+    .searchBar button:hover{
+        opacity: .75;
     }
     .searchBar input::placeholder{
         font-size: .75rem;
